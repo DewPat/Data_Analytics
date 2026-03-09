@@ -1,6 +1,6 @@
 from data_access.fetch_data import fetch_flights
 from analysis.optimizer import get_best_flight
-from visualization.plot_prices import plot_prices
+from visualization.price_plots import plot_prices
 
 origin = input("From city (e.g. DEL): ").upper()
 destination = input("To city (e.g. BOM): ").upper()

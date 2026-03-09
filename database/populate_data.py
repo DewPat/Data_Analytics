@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS flights (
 )
 """)
 
-cursor.execute("DELETE FROM flights")
+cursor.execute("TRUNCATE TABLE flights")
 
 # ------------------ MASTER DATA ------------------
 cities = [
@@ -41,8 +41,8 @@ platforms = [
 ]
 
 # ------------------ DATES (NEXT 30 DAYS) ------------------
-start_date = date(2026, 2, 1)
-dates = [start_date + timedelta(days=i) for i in range(30)]
+start_date = date(2026, 1, 1)
+dates = [start_date + timedelta(days=i) for i in range(365)]
 
 # ------------------ TIMES (EVERY 2 HOURS) ------------------
 times = [time(h, 0) for h in range(0, 24, 2)]
